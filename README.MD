@@ -40,14 +40,14 @@ sbt assembly
 
 ## Configuring
 
-The application's configuration is placed in `config.json` file. Here's the purpose of all application's properites:
+The application's configuration is by default placed in `config.json` file (filename can be changed with `-c` or `--config` argument). Here's the purpose of all application's properties:
 
 * `connection`
   * `url` - Host url (either ssh host or Alfresco host and port in `http://host:port/` format)
   * `login` - User's login
   * `password` - User's password
 * `sourceRoot` - path of local directory inside which all the synchronized file will be located. This directory files and directories specified in next properties will be synchronized with remote host
-* `destinationRoot` - path of remote directory (ssh) or node ref (Alfresco) of folder which can be mapped to sourceRoot local directory
+* `destinationRoot` - path of remote directory (ssh) or node ref (Alfresco) of folder which can be mapped to sourceRoot local directory. Depending on this field, the application will upload files through ssh or http using Alfresco API.
 * `files` - list of all the file to keep synchronized
 * `directories` - list of all the directories to keep synchronized
 
@@ -102,8 +102,9 @@ java -jar target/scala-2.11/FileSynchronizer-assembly-{version}.jar {additional 
 
 Here is the table of all additional options available:
 
-| Option                 | Effect                                                                            |
-|:-----------------------|:----------------------------------------------------------------------------------|
-| -h, --help             | Display help message                                                              |
-| -w, --watch            | Turn on watch mode. Given files will be monitored and uploaded in case of change  |
-| -W, --upload-and-watch | Upload all files first and then turn on watch mode                                |
+| Option                  | Effect                                                                            |
+|:------------------------|:----------------------------------------------------------------------------------|
+| -h, --help              | Display help message                                                              |
+| -w, --watch             | Turn on watch mode. Given files will be monitored and uploaded in case of change  |
+| -W, --upload-and-watch  | Upload all files first and then turn on watch mode                                |
+| -c, --config {filename} | Load config from file with a given name                                           |
