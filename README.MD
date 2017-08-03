@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/bms-devs/FileSynchronizer.svg?branch=master)](https://travis-ci.org/bms-devs/FileSynchronizer) [![Coverage Status](https://coveralls.io/repos/bms-devs/FileSynchronizer/badge.svg?branch=master)](https://coveralls.io/r/bms-devs/FileSynchronizer?branch=master) 
 
-### File synchronization tool for ssh and <a href="http://www.alfresco.com/"><img src="http://www.alfresco.com/sites/www.alfresco.com/themes/alfrescodotcom/img/logo.svg" alt="Alfresco" height="24px"></a>
+### File synchronization tool for ssh and <a href="http://www.alfresco.com/"><img src="https://upload.wikimedia.org/wikipedia/de/2/23/Alfresco-logo.svg" alt="Alfresco" height="24px"></a>
 
 ------------------------------------------------
 
